@@ -1,0 +1,20 @@
+package week10.practice;
+
+import java.util.Arrays;
+
+public class InPlaceArrayReversal {
+    public static void main(String[] args) {
+        int[] numbers = {11, 22, 33, 44};
+        int left = 0, right = numbers.length - 1;
+
+        while (left < right) {
+            int temp = numbers[left];
+            numbers[left] = numbers[right];
+            numbers[right] = temp;
+            left++;
+            right--;
+        }
+
+        System.out.println(Arrays.toString(numbers));
+    }
+}
